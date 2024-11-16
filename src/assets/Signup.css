@@ -1,0 +1,39 @@
+/* Signup.css */
+
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('./background.jpg'); /* Đường dẫn tới hình ảnh */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f9fafb; /* Màu nền phụ nếu ảnh không tải được */
+}
+
+.signup-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.signup-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.signup-title {
+  margin-bottom: 1.5rem;
+}
+
+.signup-footer {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #555555;
+}

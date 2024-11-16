@@ -1,0 +1,175 @@
+/* src/ChatGPTInterface.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Ẩn thanh cuộn */
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-container {
+    display: flex;
+    width: 100vw; /* Chiếm toàn bộ chiều rộng màn hình */
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    border: none; /* Loại bỏ viền */
+    overflow: hidden;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px; /* Chiều rộng cố định của sidebar */
+    background-color: #C0E9F8;
+    color: #003459;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+    overflow-y: auto; /* Cho phép cuộn trong sidebar nếu nội dung dài */
+  }
+  
+  .sidebar-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .chat-history {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .chat-history-item {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .chat-history-item:hover {
+    background-color: #80D3F0;
+  }
+  
+  /* Main Chat Area */
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+  }
+  
+  /* Header with Avatar and Logout Button */
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-name {
+    font-weight: bold;
+  }
+  
+  .logout-button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .logout-button:hover {
+    background-color: #e43a4e;
+  }
+  
+  /* Messages Area */
+  .chat-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto; /* Cho phép cuộn trong vùng tin nhắn nếu nội dung dài */
+    background-color: #fff;
+  }
+  
+  .message {
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    display: block; /* Đảm bảo mỗi tin nhắn sẽ nằm trên một dòng riêng */
+    width: fit-content; /* Đặt chiều rộng vừa với nội dung */
+    max-width: 70%; /* Giới hạn chiều rộng tối đa của tin nhắn */
+    clear: both; /* Đảm bảo mỗi tin nhắn bắt đầu trên một dòng mới */
+  }
+  
+  /* Tin nhắn của người dùng */
+  .user-message {
+    align-self: flex-end; /* Căn tin nhắn người dùng sang phải */
+    background-color: #80D3F0; /* Màu nền xanh cho tin nhắn người dùng */
+    color: white;
+    text-align: left;
+    margin-left: auto; /* Đẩy tin nhắn người dùng về bên phải */
+    border-radius: 10px 10px 0 10px; /* Làm tròn các góc */
+    display: block; /* Mỗi tin nhắn là một khối, nằm riêng trên một dòng */
+  }
+  
+  /* Tin nhắn của bot */
+  .bot-message {
+    align-self: flex-start; /* Căn tin nhắn bot sang trái */
+    background-color: #e1e1e1; /* Màu nền xám nhạt cho tin nhắn bot */
+    color: black;
+    text-align: left;
+    border-radius: 10px 10px 10px 0; /* Làm tròn các góc */
+    display: block; /* Mỗi tin nhắn là một khối, nằm riêng trên một dòng */
+  }  
+  
+  /* Input Area */
+  .chat-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  
+  .send-button {
+    padding: 10px 16px;
+    background-color: #007EA7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #003459;
+  }
+  

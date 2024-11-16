@@ -1,0 +1,87 @@
+/* global.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-image: url('./background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f9fafb; /* Màu nền phụ khi ảnh nền không tải */
+  }
+
+/* Đặt bố cục trung tâm và kích thước toàn màn hình */
+.full-screen-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Màu nền phụ khi ảnh nền không tải được */
+  .background-default {
+    background-color: #f9fafb;
+  }
+  
+  /* Hiển thị tiêu đề với font chữ và màu chuẩn */
+  .page-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+  }
+  
+  /* Các thuộc tính cho nút và trạng thái hover */
+  .button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00A7E1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #007EA7;
+  }
+  
+  /* Các thuộc tính chung cho label và input */
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #555555;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #f7f9fc;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .form-input:focus {
+    border-color: #00A7E1;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  /* Liên kết với màu và trạng thái hover */
+  .link {
+    color: #00A7E1;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .link:hover {
+    color: #007EA7;
+  }
+  
