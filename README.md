@@ -1,3 +1,6 @@
+# Import các thư viện cần thiết
+npm install express body-parser mssql cors jsonwebtoken bcrypt
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
