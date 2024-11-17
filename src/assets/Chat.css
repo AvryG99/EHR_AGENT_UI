@@ -159,6 +159,12 @@
     font-size: 14px;
     margin-right: 8px;
   }
+
+  .chat-input:focus{
+    border-color: #00A7E1;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
   
   .send-button {
     padding: 10px 16px;
