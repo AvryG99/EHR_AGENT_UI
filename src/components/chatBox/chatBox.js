@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../../assets/Chat.css';
 import avatar from '../../assets/AI.png';
 
-function ChatGPTInterface({ onLogout }) {
+function ChatGPTInterface({ username, onLogout }) {
   const [messages, setMessages] = useState([
     { sender: 'bot', text: 'Hello! How can I assist you today?' }
   ]);
@@ -64,16 +64,10 @@ function ChatGPTInterface({ onLogout }) {
         {/* Header with Avatar and Logout Button */}
         <div className="chat-header">
           <div className="user-info">
-            <img
-              src={avatar}
-              alt="User Avatar"
-              className="user-avatar"
-            />
-            <span className="user-name">User Name</span>
+            <img src={avatar} alt="User Avatar" className="user-avatar" />
+            <span className="user-name">{username}</span>
           </div>
-          <button className="logout-button" onClick={onLogout}>
-            Log Out
-          </button> {/* Gọi onLogout khi nhấn nút */}
+          <button className="logout-button" onClick={onLogout}>Log Out</button>
         </div>
 
         {/* Messages Area */}
