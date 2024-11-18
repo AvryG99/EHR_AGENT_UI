@@ -27,8 +27,9 @@ function Login({ onLogin }) {
         setMessage("Login successful!");
         setTimeout(() => {
           setMessage("");
+          localStorage.setItem("token", data.token); // Lưu token vào localStorage
           onLogin(data.username); // Pass username to App state
-          navigate("/chatbox");
+          navigate("/chatbox"); // Điều hướng đến trang chatbox
         }, 2000);
       } else {
         setMessageType("error");
