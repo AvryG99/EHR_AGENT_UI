@@ -108,8 +108,14 @@
 import React, { useEffect, useState } from "react";
 import "../../assets/Chat.css";
 import avatar from "../../assets/AI.png";
+import { useNavigate } from 'react-router-dom';
 
 function ChatGPTInterface({ onLogout }) {
+  const navigate = useNavigate();
+
+  const handleViewTables = () => {
+    navigate("/view-table");
+  };
   const [username, setUsername] = useState("");
   const [messages, setMessages] = useState([
     { sender: "bot", text: "Hello! How can I assist you today?" },
@@ -230,6 +236,7 @@ function ChatGPTInterface({ onLogout }) {
     console.log("Settings Saved:", { model, maxTokens, temperature });
     // Optionally, you can send these settings to the backend or save them in local state
   };
+  
 
   return (
     <div className="app-container">
@@ -299,6 +306,9 @@ function ChatGPTInterface({ onLogout }) {
             <img src={avatar} alt="User Avatar" className="user-avatar" />
             <span className="user-name">{username}</span>
           </div>
+          <button className="view-tables-button" onClick={handleViewTables}>
+            View Tables
+          </button>
           <button className="logout-button" onClick={onLogout}>
             Log Out
           </button>
