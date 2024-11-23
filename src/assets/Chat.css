@@ -102,6 +102,76 @@
   .logout-button:hover {
     background-color: #e43a4e;
   }
+
+  .view-logs-button {
+    padding: 10px 16px;
+    background-color: #00B8D9; /* Mint blue color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Add some margin between messages and button */
+  }
+  
+  .view-logs-button:hover {
+    background-color: #009BAF; /* Darker mint blue on hover */
+  }
+  /* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Make sure modal is above everything else */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  max-width: 80%;  /* Increase width for a wider modal */
+  width: 80%;  /* Set a fixed width percentage for responsiveness */
+  max-height: 80vh;  /* Limit the height to 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal Title */
+.modal-content h3 {
+  margin-bottom: 20px;
+}
+
+/* Log Content */
+.modal-content pre {
+  white-space: pre-wrap; /* Ensure text wraps properly */
+  word-wrap: break-word;
+  font-family: monospace;
+  font-size: 14px;
+  max-height: 70vh; /* Allow scrolling inside the content */
+  overflow-y: auto; /* Enable vertical scrolling within the content */
+}
+
+/* Close Button */
+.close-modal-button {
+  padding: 8px 16px;
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.close-modal-button:hover {
+  background-color: #e43a4e;
+}
+
   
   /* Messages Area */
   .chat-messages {
@@ -179,3 +249,77 @@
     background-color: #003459;
   }
   
+  /* Sidebar container */
+.settings-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Settings Sidebar */
+.settings-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.settings-sidebar h3 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Form elements */
+.settings-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Max tokens input */
+#max_tokens {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Temperature slider */
+#temperature {
+  width: 100%;
+}
+
+#temperature-value {
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Save Settings button */
+.settings-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.settings-button:hover {
+  background-color: #45a049;
+}
