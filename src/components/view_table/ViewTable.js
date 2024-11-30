@@ -24,7 +24,7 @@ function ViewTable() {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/table/${tableName}`, {
+      const response = await fetch(`http://localhost:5000/node/table/${tableName}`, {
         method: 'GET',
       });
       const data = await response.json();
