@@ -29,7 +29,7 @@ function ChatGPTInterface({ onLogout }) {
       try {
         const token = localStorage.getItem("token");
         const response = await fetch(
-          `http://0.0.0.0:5000/node/auth/user-info`,
+          `http://localhost:5000/node/auth/user-info`,
           {
             method: "GET",
             headers: {
@@ -60,7 +60,7 @@ function ChatGPTInterface({ onLogout }) {
 
       try {
         // Send user input to the Flask API
-        const response = await fetch("http://0.0.0.0:7000/flask/process_question", {
+        const response = await fetch("http://localhost:7000/flask/process_question", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -99,7 +99,7 @@ function ChatGPTInterface({ onLogout }) {
   // Handle view logs button click
   const handleViewLogs = async () => {
     try {
-      const response = await fetch("http://0.0.0.0:7000/flask/get_logs", {
+      const response = await fetch("http://localhost:7000/flask/get_logs", {
         method: "GET",
       });
 
