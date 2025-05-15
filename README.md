@@ -10,9 +10,8 @@ The system is built with a **microservice architecture**, separating responsibil
 
 ### 🧩 Microservice Architecture
 
-![System Diagram](.readme_assets/solution.png)
-> _Image: Diagram of how the UI interacts with the Flask AI backend and the regular JS backend._  
-> *(Make sure to place your diagram in the `docs/` folder or update the path.)*
+![System Diagram](readme_assets/solution.png)
+> _Image: Diagram of how the UI interacts with the Flask AI backend and the regular JS backend._ 
 
 ---
 
